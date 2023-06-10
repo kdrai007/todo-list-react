@@ -101,8 +101,8 @@ const Home = ({ ScreenWidth }: Props) => {
     }
     return (
         <div className={`flex flex-col items-center relative h-screen overflow-y-scroll hideScroll ${theme ? "bg-white" : "bg-black"}`}>
-            {ScreenWidth > 800 ? <img src={`/images/bg-desktop-${theme ? "light" : "dark"}.jpg`} alt="background-img" className='w-full md:h-[50%] lg:h-[40%] object-fill z-0' /> : <img src={`/images/bg-mobile-${theme ? "light" : "dark"}.jpg`} alt="background-img" className='w-full h-[50%]' />}
-            <div className='absolute flex items-center justify-between w-[80%] md:w-[35%] mt-[50px]'>
+            {ScreenWidth > 800 ? <img src={`/images/bg-desktop-${theme ? "light" : "dark"}.jpg`} alt="background-img" className='w-full h-[40%] object-fill z-0' /> : <img src={`/images/bg-mobile-${theme ? "light" : "dark"}.jpg`} alt="background-img" className='w-full h-[50%]' />}
+            <div className='absolute flex items-center justify-between w-[80%] md:w-[50%] lg:w-[35%] mt-[50px]'>
                 <h1 className='font-bold text-white tracking-[8px] text-[28px]'>TODO</h1>
                 <img
                     className='cursor-pointer'
@@ -111,7 +111,7 @@ const Home = ({ ScreenWidth }: Props) => {
                     onClick={() => setTheme(!theme)}
                 />
             </div>
-            <div className={` ${theme ? 'bg-white' : 'bg-[#25273cf6] text-white'} p-4 rounded-md absolute flex items-center justify-between w-[90%] md:w-[35%] mt-[120px]`}>
+            <div className={` ${theme ? 'bg-white' : 'bg-[#25273cf6] text-white'} p-4 rounded-md absolute flex items-center justify-between w-[90%] md:w-[50%] lg:w-[35%] mt-[120px]`}>
                 <div className={`w-[24px] h-[24px] border  ${theme ? "border-black" : ' border-white'} rounded-full cursor-pointer flex items-center`} />
                 <input
                     type="text"
@@ -122,7 +122,7 @@ const Home = ({ ScreenWidth }: Props) => {
                     onKeyDown={(e) => handleKey(e)}
                 />
             </div>
-            <div className={`absolute flex flex-col items-center justify-evenly rounded-md w-[90%] md:w-[35%] mt-[190px]  ${theme ? 'bg-white text-black' : 'bg-[#25273cf6] text-white'} text-white  hideScroll`}>
+            <div className={`absolute flex flex-col items-center justify-evenly rounded-md w-[90%] md:w-[50%] lg:w-[35%] mt-[190px]  ${theme ? 'bg-white text-black' : 'bg-[#25273cf6] text-white'} text-white  hideScroll`}>
                 {todos.map((todo, index) => (
                     <Todos key={todo.id} todo={todo} index={index} handleCheck={handleCheck} handleDelete={handleDelete} theme={theme} />
                 ))}
