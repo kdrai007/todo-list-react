@@ -129,11 +129,11 @@ const Home = ({ ScreenWidth }: Props) => {
 
                 <div className='w-full flex justify-between p-3  md:text-sm text-[#4d5066]'>
                     <p><span>{todos.length}</span> items left</p>
-                    {ScreenWidth > 800 && <SetButtons type={type} handleChanges={handleChanges} theme={theme} />}
+                    {ScreenWidth > 800 && <SetButtons type={type} handleChanges={handleChanges} />}
                     <button className={`${theme ? 'hover:text-black' : 'hover:text-white'}`} onClick={handleClear} >Clear Completed</button>
                 </div>
                 {ScreenWidth < 800 && <div className={`w-full flex items-center justify-center text-[#4d5066] ${theme ? 'bg-white ' : 'bg-[#25273cf6]'}  p-4`}>
-                    <SetButtons type={type} handleChanges={handleChanges} theme={theme} />
+                    <SetButtons type={type} handleChanges={handleChanges} />
                 </div>}
             </div>
 

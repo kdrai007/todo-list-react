@@ -3,10 +3,9 @@ import { type } from './Home';
 type Props = {
     type: type;
     handleChanges: (str: string) => void;
-    theme: boolean
 }
 
-const SetButtons = ({ type, handleChanges, theme }: Props) => {
+const SetButtons = ({ type, handleChanges }: Props) => {
     return (
         <div className='flex gap-2 items-center'>
             <button className={` ${type.isActive === 'all' && 'text-blue-600'}`} onClick={() => handleChanges('all')} >All</button>
